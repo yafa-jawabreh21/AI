@@ -1,7 +1,11 @@
 
 async function send(){
   const p = document.getElementById('prompt').value;
-  const r = await fetch('/api/ask',{method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({text:p})});
+  const r = await fetch('https://ai-1-12fi.onrender.com/api/ask', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ text: p })
+});
   const j = await r.json(); document.getElementById('out').textContent = j.reply || JSON.stringify(j);
 }
 async function loadCatalog(){

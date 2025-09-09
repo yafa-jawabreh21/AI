@@ -349,3 +349,12 @@ async function go(){
 @app.get("/", response_class=HTMLResponse)
 async def root():
     return HTML
+@app.post("/api/admin/update")
+async def admin_update(payload: dict):
+    password = payload.get("password")
+    new_password = payload.get("new_password")
+    # implement your logic here
+    if password != "your_old_pwd":
+        return JSONResponse({"ok": False, "detail": "Invalid password"})
+    # Update password logic...
+    return {"ok": True}

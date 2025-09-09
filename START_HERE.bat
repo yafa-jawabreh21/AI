@@ -1,0 +1,1 @@
+@echo off\r\nstart "" ".\backend\run.bat"\r\nstart "" http://localhost:8010/\r\n

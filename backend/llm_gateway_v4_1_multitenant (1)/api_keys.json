@@ -1,0 +1,23 @@
+[
+  {
+    "key": "KEY_MARS_123",
+    "tenant": "mars",
+    "rps": 10,
+    "burst": 40,
+    "quota_daily": 50000
+  },
+  {
+    "key": "KEY_MILKYWAY_456",
+    "tenant": "milkyway",
+    "rps": 5,
+    "burst": 20,
+    "quota_daily": 20000
+  },
+  {
+    "key": "KEY_HIKMA_789",
+    "tenant": "hikma",
+    "rps": 3,
+    "burst": 12,
+    "quota_daily": 10000
+  }
+]

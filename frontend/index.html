@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Future Crown Ultimate — Unified v3</title>
+<link rel="manifest" href="/manifest.json">
+<style>
+body{font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;background:#0b1220;color:#e2e8f0;margin:0}
+header,footer{padding:16px}.wrap{max-width:1100px;margin:auto;padding:16px}
+.card{background:#0f172a;border:1px solid #1f2937;border-radius:16px;padding:16px;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+button{padding:10px 16px;border-radius:12px;border:1px solid #334155;background:#0ea5e9;color:white;cursor:pointer}
+input,textarea{padding:12px;border-radius:12px;border:1px solid #334155;background:#0b1220;color:#e2e8f0;width:100%}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.badge{font-size:12px;opacity:.8}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <h1>Future Crown Ultimate — Unified v3</h1>
+  <p>نسخة موحّدة: محادثة + أدوات + كاتالوج + ذاكرة + جاهزية PWA.</p>
+  <nav><a href="/admin.html" style="color:#93c5fd">الإدارة</a></nav>
+</header>
+<main class="wrap">
+  <div class="card">
+    <label>أمر نصي:</label>
+    <div style="display:flex;gap:8px;margin-top:8px">
+      <input id="prompt" placeholder="أكتب ما تريد تنفيذه"/>
+      <button onclick="send()">تشغيل</button>
+    </div>
+    <pre id="out" style="white-space:pre-wrap;margin-top:10px"></pre>
+  </div>
+
+  <section style="margin-top:20px">
+    <h3>الكاتالوج</h3>
+    <div id="catalog" class="grid"></div>
+  </section>
+
+  <section class="card" style="margin-top:20px">
+    <h3>الذاكرة</h3>
+    <input type="file" id="fileup"><button onclick="upload()">رفع</button>
+    <div id="uplog" class="badge"></div>
+  </section>
+</main>
+<footer class="wrap">
+  <small class="badge">PWA: Add to Home screen. المنفذ 8010.</small>
+</footer>
+<script src="/assets/app.js"></script>
+<script>
+if('serviceWorker' in navigator){navigator.serviceWorker.register('/service-worker.js');}
+</script>
+</body>
+</html>

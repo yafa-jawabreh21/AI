@@ -1,0 +1,27 @@
+[
+  {
+    "key": "evm",
+    "name": "EVM Analyzer",
+    "desc": "حساب SPI/CPI/EAC (stub)"
+  },
+  {
+    "key": "ifrs15",
+    "name": "IFRS‑15 Engine",
+    "desc": "جدول الاعتراف الشهري CSV (stub)"
+  },
+  {
+    "key": "procure",
+    "name": "Procurement Trigger",
+    "desc": "تنبيه سابق 15 يوم (☠️)"
+  },
+  {
+    "key": "reports",
+    "name": "Report Builder",
+    "desc": "HTML/PDF لاحقًا"
+  },
+  {
+    "key": "ai",
+    "name": "AI Orchestrator",
+    "desc": "مساعد نص/صوت/كاميرا + أدوات"
+  }
+]

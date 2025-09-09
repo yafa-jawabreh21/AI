@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unified v3 — Admin</title>
+<style>
+body{font-family:system-ui;background:#0b1220;color:#e2e8f0;margin:0}.wrap{max-width:900px;margin:auto;padding:16px}
+.card{background:#0f172a;border:1px solid #1f2937;border-radius:16px;padding:16px}
+input,textarea{width:100%;padding:10px;border-radius:10px;border:1px solid #334155;background:#0b1220;color:#e2e8f0}
+button{padding:10px 16px;border-radius:12px;border:1px solid #334155;background:#0ea5e9;color:white;cursor:pointer}
+</style></head>
+<body>
+<div class="wrap">
+<h2>الإدارة — Unified v3</h2>
+<div class="card">
+  <label>كلمة السر:</label><input id="pwd" value="1234" type="password"/>
+  <div style="display:flex;gap:8px;margin-top:10px">
+    <input id="newpwd" placeholder="كلمة سر جديدة (اختياري)"/><button onclick="changePwd()">تغيير</button>
+  </div>
+</div>
+<div class="card" style="margin-top:16px">
+  <h3>ضبط مزود الذكاء</h3>
+  <input id="mode" placeholder="local_stub | openai | azure | ollama | vllm"/>
+  <input id="endpoint" placeholder="llm_endpoint"/><input id="apikey" placeholder="llm_api_key"/>
+  <button onclick="setAI()">حفظ</button>
+</div>
+<div class="card" style="margin-top:16px">
+  <h3>إدارة الكاتالوج</h3>
+  <input id="key" placeholder="key"/><input id="name" placeholder="name"/><textarea id="desc" placeholder="desc"></textarea>
+  <button onclick="addService()">إضافة</button>
+  <div style="display:flex;gap:8px;margin-top:10px">
+    <input id="rmkey" placeholder="key للحذف"/><button onclick="removeService()">حذف</button>
+  </div>
+</div>
+<p style="opacity:.7;margin-top:10px"><a href="/" style="color:#93c5fd">← الرجوع</a></p>
+</div>
+<script src="/assets/admin.js"></script>
+</body></html>

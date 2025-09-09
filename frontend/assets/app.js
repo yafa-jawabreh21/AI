@@ -1,7 +1,7 @@
 
 async function send(){
   const p = document.getElementById('prompt').value;
-  const r = await fetch('https://ai-1-12fi.onrender.com/api/ask', {
+  const r = await fetch('/api/ask', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({ text: p })
